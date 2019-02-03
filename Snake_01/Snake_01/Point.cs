@@ -41,6 +41,7 @@ namespace Snake_01
 
         }
 
+      
 
         public void DrawPoint()
         {
@@ -48,6 +49,13 @@ namespace Snake_01
             Console.Write(sym);
         
         }
+
+        public void Clear()
+        {
+            sym = ' ';
+            DrawPoint();
+        }
+
 
         public override string ToString()
         {

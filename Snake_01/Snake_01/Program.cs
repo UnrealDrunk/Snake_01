@@ -27,6 +27,13 @@ namespace Snake_01
             Snake snake = new Snake(p, 4, Direction.RIGHT);
 
             snake.Drow();
+            snake.Move();
+            snake.Move();
+            snake.Move();
+            snake.Move();
+            snake.Move();
+            snake.Move();
+            snake.Move();
 
             Console.ReadLine();
             

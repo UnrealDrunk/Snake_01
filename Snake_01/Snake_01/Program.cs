@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace Snake_01
 {
@@ -27,14 +28,19 @@ namespace Snake_01
             Snake snake = new Snake(p, 4, Direction.RIGHT);
 
             snake.Drow();
-            snake.Move();
-            snake.Move();
-            snake.Move();
-            snake.Move();
-            snake.Move();
-            snake.Move();
-            snake.Move();
 
+            while(true)
+            {
+                if(Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.HadleKey(key.Key);
+                }
+                Thread.Sleep(200);
+                snake.Move();
+            }
+           
+            
             Console.ReadLine();
             
  

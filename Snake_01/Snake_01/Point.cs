@@ -41,6 +41,10 @@ namespace Snake_01
 
         }
 
+        public bool isHit(Point p)
+        {
+            return p.x == this.x && p.y == this.y;
+        }
       
 
         public void DrawPoint()
